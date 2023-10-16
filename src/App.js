@@ -1,5 +1,5 @@
 import Header from './components/header/Header.jsx'
-import Main from './components/main/Main.jsx'
+import Main from './main/Main.jsx'
 
 
 function App() {
