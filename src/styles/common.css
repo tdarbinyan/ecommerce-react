@@ -1,7 +1,7 @@
 body {
     font-family: 'Monda', sans-serif;
-    width: 100%;
-    max-width: 1920px;
+    max-width: 100%;
+    width: 1920px;
     background: url('./../img/1-background.png') no-repeat;
     background-size: cover;
     margin: 0 auto;
