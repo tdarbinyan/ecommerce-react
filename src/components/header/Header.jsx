@@ -8,18 +8,14 @@ function Header() {
   return (
     <header className="header">
       <a href="#" className="menu"><img src = {menuIcon}></img></a>
-      <a href="#"><h1>logo</h1></a>
+      <a href="#" className="logo">logo</a>
       <div className="form">
         <input type="search" placeholder="Search models and collections" />
         <button className="search__button"><img src = {searchIcon}></img></button>
       </div>
-      <nav className="header__nav">
-        <ul className="header__list">
-          <li className="header__item" href="#"><img src = {favIcon}></img></li>
-          <li className="header__item" href="#"><img src = {cartIcon}></img></li>
-          <li className="header__item" href="#"><img src = {profileIcon}></img></li>
-        </ul>
-      </nav>
+          <a className="header__item" href="#"><img src = {favIcon}></img></a>
+          <a className="header__item" href="#"><img src = {cartIcon}></img></a>
+          <a className="header__item" href="#"><img src = {profileIcon}></img></a>
     </header>
   );
 }

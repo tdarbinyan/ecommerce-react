@@ -8,15 +8,17 @@ function Main() {
       <img src={mainPhoto} className="main_photo"></img>
 
       <div className="purple_form">
-        {/* <p>some text describing our bestseller</p> */}
-        {/* <button className="purple_button"> */}
-          {/* <h1>add to the cart</h1> */}
-        {/* </button> */}
+        <div className="main__text">
+          <h1>some text describing our bestseller</h1>
+        </div>
+        <button className="purple_button">
+          add to the cart
+        </button>
       </div>
 
-      {/* <button className="main__next_button">
+      <button className="main__next_button">
         <img src={nextIcon}></img>
-      </button> */}
+      </button>
     </section>
   );
 }
