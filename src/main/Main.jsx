@@ -16,7 +16,7 @@ function Main() {
         </button>
       </div>
 
-      <button className="main__next_button">
+      <button onClick = { () => window.scrollTo(1000,1000) } className="main__next_button">
         <img src={nextIcon}></img>
       </button>
     </section>
