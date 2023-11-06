@@ -1,13 +1,12 @@
-import Header from './components/header/Header.jsx'
 import Main from './main/Main.jsx'
-
+import Models from './models/Models.jsx'
 
 function App() {
 
   return (
     <div className="App">
-      <Header />
       <Main />
+      <Models />
     </div>
   );
 }
