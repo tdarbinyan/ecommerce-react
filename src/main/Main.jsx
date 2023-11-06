@@ -1,4 +1,5 @@
 import "./main.css";
+import React, { useState } from 'react';
 import mainPhoto from "./../img/main_photo.png";
 import nextIcon from "./../img/next_icon.svg";
 import menuIcon from "./../img/menu_icon.svg"; //временная мера, потом занесу импорт всех изображений в отдельный файл или подключу иконки
@@ -7,7 +8,36 @@ import favIcon from "./../img/fav_icon.svg";
 import cartIcon from "./../img/cart_icon.svg";
 import profileIcon from "./../img/profile_icon.svg";
 
+function smoothScroll(x, y) { // function for smooth scrolling
+  window.scroll({
+    left: x,
+    top: y,
+    behavior: 'smooth',
+  });
+}
+
+function LoginWindow({ onClose }) { // component that returns login form
+  return (
+    <div className="login-window">
+      <h2>Login</h2>
+      {/* Add your login form here */}
+      <button onClick={onClose}>Close</button>
+    </div>
+  );
+}
+
 function Main() {
+
+  const [isLoginWindowOpen, setLoginWindowOpen] = useState(false); // utility for login form
+
+  const openLoginWindow = () => { // utility for login form
+    setLoginWindowOpen(true);
+  };
+
+  const closeLoginWindow = () => { // utility for login form
+    setLoginWindowOpen(false);
+  };
+
   return (
     <section className="main_page">
         <div className="intro">
@@ -21,7 +51,12 @@ function Main() {
             </div>
             <a className="header__item" href="#"><img src = {favIcon}></img></a>
             <a className="header__item" href="#"><img src = {cartIcon}></img></a>
-            <a className="header__item" href="#"><img src = {profileIcon}></img></a>
+            <a className="header__item" href="#" onClick={openLoginWindow}><img src = {profileIcon}></img></a>
+            {isLoginWindowOpen && (
+              <div className="overlay" onClick={closeLoginWindow}>
+                <LoginWindow onClose={closeLoginWindow} />
+              </div>
+            )}
           </header>
 
           <div className="main__container">
@@ -34,15 +69,14 @@ function Main() {
                   add to the cart
                 </button>
               </div>
-            <button onClick = { () => window.scrollTo(1000,1000) } className="main__next_button">
-              <img src={nextIcon}></img>
-            </button> 
           </div>
 
  
           </div>
         </div>
-
+        <button onClick = { () => smoothScroll(1000,1000) } className="main__next_button">
+            <img src={nextIcon}></img>
+        </button> 
     </section>
   );
 }

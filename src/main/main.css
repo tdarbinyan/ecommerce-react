@@ -41,12 +41,12 @@
     max-width: 1780px;
     padding: 0 15px;
     margin: 0 auto; 
-    padding-top: 45px;
+    padding-top: 10px;
     align-items: center;
     text-align: center;
     display: flex;
     justify-content: space-between;
-    gap: 35px;
+    gap: 17px;
 }
 
 
@@ -80,7 +80,7 @@
   justify-content: space-between;
   position: relative;
   max-width: 130vw;
-  min-width: 340px;
+  min-width: 250px;
   height: 50px;
   background-color: rgba(241, 242, 246, 1);
   box-shadow: 0px 5px 8px 0px rgb(139, 137, 137);
@@ -88,8 +88,8 @@
 }
 
 .form input {
+  font: 1rem;
   width: 1230px;
-  min-width: 275px;
   height: 25px;
   margin-left: 20px;
   color: black;
@@ -133,13 +133,17 @@
 
 .main__container {
     position: absolute;
-    top: 179px;
-    right: 13.44vw;
     
-    width: 72.92vw;
-    height: 39.06vw;
-    z-index: 1000000;
+    top: 17vh;
+    left: 50%;
+    transform: translateX(-50%);
+    
+    width: 73vw;
+    height: 77vh;
+    z-index: 100;
 
+    display: flex;
+    align-items: center;
     /* background-color: #f2b4fd;
     background-size: cover; */
   }
@@ -149,14 +153,13 @@
     top: 0;
     right: 0;
 
-    width: 38.39vw;
+    width: 77vh;
     border-radius: 3.13vw;
     box-shadow: 0px 5px 10px -5px rgba(34, 60, 80, 0.6);
   }
 
   .purple_form {
-    position: absolute;
-    top: 5.31vw;
+    position: relative;
     left: 0;
 
     width: 41.35vw;
@@ -217,14 +220,15 @@
   }
 
   .main__next_button {
-    width: 6.25vw;
-    height: 6.25vw;
+    width: 13vh;
+    height: 13vh;
 
     position: absolute;
-    left: 33.33vw;
-    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: 5vh;
 
-    z-index: 10000000;
+    z-index: 100;
     color: black;
     background-color: rgba(241, 242, 246, 1);
     box-shadow: 0px 5px 10px -5px rgba(34, 60, 80, 0.6);
@@ -240,3 +244,103 @@
   .main__next_button img {
     width: 40%;
   }
+
+  /*-----------------------------LOGIN FORM------------------------*/
+  .login-window {
+    font-family: 'Monda';
+    position: fixed;
+    height: 72vh;
+    width: 25vw;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #fff;
+    border-radius: 40px;
+    box-shadow: 0px 5px 10px -5px rgba(34, 60, 80, 0.6);
+    z-index: 101;
+    text-align: center;
+  }
+  
+  .login-window h2 {
+    margin: 0 0 20px;
+  }
+  
+  .login-window button {
+    background-color: #333;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+  }
+  
+  .overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(255, 255, 255, 0.7);
+    z-index: 101;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  /*------------------------------MEDIA QUERIES FOR RESPONSIVENESS----------------------------*/
+  @media (max-width: 768px) { /* mobile phones */
+    
+    .form{
+      
+    }
+
+    .login-window{
+      width: 80vw;
+    }
+
+    .main__container {
+      width: 70vw;
+      height: 70vh;
+    }
+
+    .main_photo {
+      position: absolute;
+      top: 0;
+  
+      width: 70vw;
+      /*max-width: 100%;
+      max-height: 100%;
+      width: auto;
+      height: auto;*/
+    }
+
+    .purple_form {
+      position: absolute;
+
+      bottom: 0;
+      top: 50vw;
+  
+      width: 70vw;
+      height: 20vw;
+    }
+
+    .main__text {
+      width: 60vw;
+      top: 4vw;
+    }
+
+    .purple_button {
+      width: 20vw;
+      height: 5vw;
+      border-radius: 2vw;
+      bottom: 4vw;
+    }
+
+  }
+
+  @media (min-width: 769px) and (max-width: 1024px) { /* tablets */
+    .login-window{
+      width: 60vw;
+    }
+  }
+
+
