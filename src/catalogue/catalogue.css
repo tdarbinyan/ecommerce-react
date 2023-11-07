@@ -1,0 +1,101 @@
+.catalogue_page {
+  margin: 0 auto;
+  padding: 0;
+  width: 100%;
+  max-width: 1920px;
+  height: 100vh;
+  background: url("./../img/3-background.png") no-repeat;
+  -webkit-background-size: cover;
+  background-size: cover;
+  text-decoration: none;
+  color: black;
+}
+
+.catalogue__header {
+  margin: 0 3.44vw;
+  padding-top: 0.56vw;
+  display: flex;
+  justify-content: space-between;
+
+  font-size: clamp(0.875rem, -0.338rem + 2.16vw, 2.25rem);
+}
+
+.catalogue__header a {
+  padding: 0.57vw 1.04vw;
+  text-decoration: none;
+  color: black;
+}
+
+.catalogue__header_choice {
+  display: flex;
+  justify-content: space-between;
+}
+
+.catalogue__header_choice a:hover {
+  border-radius: 2.6vw;
+  background-color: rgba(194, 191, 191, 0.623);
+}
+
+.catalogue__white_style {
+  min-width: 6.25vw;
+  border-radius: 2.6vw;
+  background-color: rgba(241, 242, 246, 1);
+}
+
+.catalogue__header_choice a:active {
+  border-radius: 2.6vw;
+  background-color: rgba(241, 242, 246, 1);
+}
+
+/* ---------------------------CATALOGUE------------------------------------ */
+
+.catalogue {
+  padding: 1.5vw 3.44vw;
+  display: flex;
+  justify-content: space-between;
+}
+
+.catalogue__cards {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.78vw 2.24vw;
+}
+
+.catalogue__card {
+  display: flex;
+  flex-direction: column;
+  gap: 0.95vw 0;
+}
+
+.catalogue__card_img {
+  width: 16.09vw;
+  border-radius: 2.08vw;
+  box-shadow: 0px 5px 8px 0px rgb(139, 137, 137);
+}
+
+.catalogue__main_card {
+  display: flex;
+  flex-direction: column;
+  width: 37.92vw;
+  gap: 0.95vw 0;
+}
+
+.catalogue__main_card img {
+  width: 37.92vw;
+  border-radius: 2.08vw;
+  box-shadow: 0px 5px 8px 0px rgb(139, 137, 137);
+}
+
+.catalogue__add_cart {
+  height: 4.01vw;
+  font-size: clamp(0.875rem, -0.007rem + 1.57vw, 1.875rem);
+  border-radius: 1.56vw;
+  background-color: rgba(241, 242, 246, 1);
+  box-shadow: 0px 5px 8px 0px rgb(139, 137, 137);
+  cursor: pointer;
+}
+
+.catalogue button:hover {
+  background-color: rgba(228, 229, 235, 1);
+  cursor: pointer;
+}

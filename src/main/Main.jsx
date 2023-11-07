@@ -19,9 +19,19 @@ function smoothScroll(x, y) { // function for smooth scrolling
 function LoginWindow({ onClose }) { // component that returns login form
   return (
     <div className="login-window">
-      <h2>Login</h2>
-      {/* Add your login form here */}
-      <button onClick={onClose}>Close</button>
+
+      <div className="login__container">
+
+        <div className="login__desc">
+            <h2>login</h2>
+            <span>or <a href="#">sign up</a></span>
+        </div>
+
+      <input placeholder="username or email"/>
+      <input placeholder="password"/>
+      <button className="sign" onClick={onClose}>sign in</button>
+    </div>
+
     </div>
   );
 }
@@ -74,7 +84,7 @@ function Main() {
  
           </div>
         </div>
-        <button onClick = { () => smoothScroll(1000,1000) } className="main__next_button">
+        <button onClick = { () => smoothScroll(0,980) } className="main__next_button">
             <img src={nextIcon}></img>
         </button> 
     </section>
@@ -82,5 +92,3 @@ function Main() {
 }
 
 export default Main;
-
-// onClick = { () => window.scrollTo(1000,1000) }
