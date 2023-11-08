@@ -21,36 +21,35 @@ function Catalogue() {
 
                     <div className="catalogue__cards"> 
 
-                      <div className="catalogue__card">
-                                <img className="catalogue__card_img" src = {models__2}></img>
-                                <button className="catalogue__add_cart">add to the cart</button>
-                      </div>
+                        <div className="catalogue__card">
+                                  <img className="catalogue__card_img" src = {models__2}></img>
+                                  <button className="catalogue__add_cart">add to the cart</button>
+                        </div>
+
+                        <div className="catalogue__card">
+                                  <img className="catalogue__card_img" src = {models__2}></img>
+                                  <button className="catalogue__add_cart">add to the cart</button>
+                        </div>
 
                       <div className="catalogue__card">
-                                <img className="catalogue__card_img" src = {models__2}></img>
-                                <button className="catalogue__add_cart">add to the cart</button>
-                      </div>
+                                  <img className="catalogue__card_img" src = {models__2}></img>
+                                  <button className="catalogue__add_cart">add to the cart</button>
+                        </div>
 
-                      <div className="catalogue__card">
-                                <img className="catalogue__card_img" src = {models__2}></img>
-                                <button className="catalogue__add_cart">add to the cart</button>
-                      </div>
+                        <div className="catalogue__card">
+                                  <img className="catalogue__card_img" src = {models__2}></img>
+                                  <button className="catalogue__add_cart">add to the cart</button>
+                        </div>
 
-                      <div className="catalogue__card">
-                                <img className="catalogue__card_img" src = {models__2}></img>
-                                <button className="catalogue__add_cart">add to the cart</button>
-                      </div>
+                        <div className="catalogue__card">
+                                  <img className="catalogue__card_img" src = {models__2}></img>
+                                  <button className="catalogue__add_cart">add to the cart</button>
+                        </div>
 
-                      <div className="catalogue__card">
-                                <img className="catalogue__card_img" src = {models__2}></img>
-                                <button className="catalogue__add_cart">add to the cart</button>
-                      </div>
-
-                      <div className="catalogue__card">
-                                <img className="catalogue__card_img" src = {models__2}></img>
-                                <button className="catalogue__add_cart">add to the cart</button>
-                      </div>
-
+                        <div className="catalogue__card">
+                                  <img className="catalogue__card_img" src = {models__2}></img>
+                                  <button className="catalogue__add_cart">add to the cart</button>
+                        </div>
 
                     </div>
 

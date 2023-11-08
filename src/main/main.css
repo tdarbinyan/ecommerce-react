@@ -251,7 +251,7 @@ h1 {
 .login-window {
   font-family: "Monda";
   width: 100%;
-  height: 40.57vw;
+  height: 70vh;
   max-width: 30.26vw;
   background-color: white;
   border-radius: 40px;
@@ -345,13 +345,6 @@ h2, span {
 @media (max-width: 768px) {
   /* mobile phones */
 
-  .form {
-  }
-
-  .login-window {
-    width: 80vw;
-  }
-
   .main__container {
     width: 70vw;
     height: 70vh;
@@ -393,7 +386,4 @@ h2, span {
 
 @media (min-width: 769px) and (max-width: 1024px) {
   /* tablets */
-  .login-window {
-    width: 60vw;
-  }
 }

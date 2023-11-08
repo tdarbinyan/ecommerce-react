@@ -2,6 +2,7 @@
   margin: 0 auto;
   padding: 0;
   width: 100%;
+  overflow: hidden;
   max-width: 1920px;
   height: 100vh;
   background: url("./../img/3-background.png") no-repeat;
@@ -58,11 +59,14 @@
 .catalogue__cards {
   display: flex;
   flex-wrap: wrap;
-  gap: 0.78vw 2.24vw;
+  gap: 0.78vw 0vw;
+  justify-content: space-between;
+  margin-right: 4.8vw;
 }
 
 .catalogue__card {
   display: flex;
+  max-width: 31vh;
   flex-direction: column;
   gap: 0.95vw 0;
 }
@@ -70,11 +74,13 @@
 .catalogue__card_img {
   width: 16.09vw;
   border-radius: 2.08vw;
+  max-width: 31vh;
   box-shadow: 0px 5px 8px 0px rgb(139, 137, 137);
 }
 
 .catalogue__main_card {
   display: flex;
+  max-width: 74vh;
   flex-direction: column;
   width: 37.92vw;
   gap: 0.95vw 0;
@@ -82,6 +88,7 @@
 
 .catalogue__main_card img {
   width: 37.92vw;
+  max-width: 74vh;
   border-radius: 2.08vw;
   box-shadow: 0px 5px 8px 0px rgb(139, 137, 137);
 }

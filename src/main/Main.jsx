@@ -8,10 +8,10 @@ import favIcon from "./../img/fav_icon.svg";
 import cartIcon from "./../img/cart_icon.svg";
 import profileIcon from "./../img/profile_icon.svg";
 
-function smoothScroll(x, y) { // function for smooth scrolling
+function smoothScroll() { // function for smooth scrolling
   window.scroll({
-    left: x,
-    top: y,
+    left: 0,
+    top: window.innerHeight,
     behavior: 'smooth',
   });
 }
@@ -27,10 +27,10 @@ function LoginWindow({ onClose }) { // component that returns login form
             <span>or <a href="#">sign up</a></span>
         </div>
 
-      <input placeholder="username or email"/>
-      <input placeholder="password"/>
-      <button className="sign" onClick={onClose}>sign in</button>
-    </div>
+        <input placeholder="username or email"/>
+        <input placeholder="password"/>
+        <button className="sign" onClick={onClose}>sign in</button>
+      </div>
 
     </div>
   );
@@ -61,12 +61,15 @@ function Main() {
             </div>
             <a className="header__item" href="#"><img src = {favIcon}></img></a>
             <a className="header__item" href="#"><img src = {cartIcon}></img></a>
-            <a className="header__item" href="#" onClick={openLoginWindow}><img src = {profileIcon}></img></a>
+            <a className="header__item" href="#" onClick={openLoginWindow}><img src={profileIcon} alt="Profile Icon" /></a>
             {isLoginWindowOpen && (
-              <div className="overlay" onClick={closeLoginWindow}>
+            <div className="overlay" onClick={closeLoginWindow}>
+              <div className="login-window" onClick={(e) => e.stopPropagation()}>
                 <LoginWindow onClose={closeLoginWindow} />
               </div>
+            </div>
             )}
+
           </header>
 
           <div className="main__container">
@@ -84,7 +87,7 @@ function Main() {
  
           </div>
         </div>
-        <button onClick = { () => smoothScroll(0,980) } className="main__next_button">
+        <button onClick = { () => smoothScroll() } className="main__next_button">
             <img src={nextIcon}></img>
         </button> 
     </section>

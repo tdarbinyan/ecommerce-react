@@ -29,10 +29,10 @@ body {
   text-align: center;
   display: flex;
   justify-content: space-between;
-  padding: 0 15px;
-  padding-top: 3.13vw ;
+  padding: 0 1vw;
+  padding-top: 1vw ;
   padding-bottom: 2.34vw;
-  gap: 10px;
+  gap: 1vw;
 }
 
 .categories__card {
@@ -48,10 +48,10 @@ body {
 .categories__card__buttons {
   font-size: clamp(1rem, 0.118rem + 1.57vw, 2rem);
   display: flex;
-  gap: 16px;
+  gap: 1vw;
   position: absolute;
-  bottom: 20px;
-  padding-left: 18px;
+  bottom: 1.5vw;
+  padding-left: 1vw;
 }
 
 .categories__card__buttons a {
@@ -80,18 +80,19 @@ body {
 
 .models {
   max-width: 1786px;
+  max-height: 50vh;
   margin: 0 auto;
-  align-items: center;
   text-align: center;
   display: flex;
   justify-content: space-between;
-  padding: 0 15px;
+  padding: 0 1vw;
 }
 
 .show_btn {
   position: relative;
   width: 10.21vw;
   height: 25.36vw;
+  max-height: 50vh;
   display: flex;
   flex-direction: column;
 
@@ -123,6 +124,7 @@ body {
 .models__card {
   position: relative;
   max-width: 19.43vw;
+  max-height: 50vh;
   display: flex;
   flex-direction: column;
   gap: 1.04vw;
@@ -130,11 +132,13 @@ body {
 
 .models__cards {
   display: flex;
+  max-height: 50vh;
   justify-content: space-between;
-  gap: 1.04vw;
+  gap: 2.04vw;
 }
 
 .models__card_img {
+  max-height: 38.41vh;
   border-radius: 2.08vw;
   box-shadow: 0px 5px 8px 0px rgb(139, 137, 137);
 }
@@ -142,6 +146,8 @@ body {
 .models__add_cart {
   width: 19.43vw;
   height: 4.84vw;
+  max-height: 9vh;
+  align-items: center;
   padding: 0.83vw 2.97vw;
 
   font-size: clamp(0.875rem, -0.338rem + 2.16vw, 2.25rem);
