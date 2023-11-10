@@ -1,8 +1,7 @@
-body {
-    font-family: 'Monda', sans-serif;
-    width: 100%;
-    max-width: 1920px;
-    background: url('./../img/1-background.png') no-repeat;
-    background-size: cover;
-    margin: 0 auto;
-}
+
+input:focus,
+   input:active,
+   button:focus,
+   button:active {
+   outline: none;
+   }

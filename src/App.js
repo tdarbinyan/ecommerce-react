@@ -1,12 +1,14 @@
-import Header from './components/header/Header.jsx'
 import Main from './main/Main.jsx'
-
+import Models from './models/Models.jsx'
+import Catalogue from './catalogue/Catalogue.jsx';
 
 function App() {
+
   return (
     <div className="App">
-      <Header />
       <Main />
+      <Models />
+      <Catalogue />
     </div>
   );
 }

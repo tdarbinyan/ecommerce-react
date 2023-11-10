@@ -1,71 +1,389 @@
-  .main {
-    margin: 0;
-    padding: 0;
-    width: 100%;
-    height: 100%;
-    max-width: 1920px;
-    max-height: 1080px;
-    position: relative;
+* {
+  font-family: "Monda", sans-serif;
+  border: none;
+}
+
+.main_page {
+  margin: 0 auto;
+  width: 100%;
+  max-width: 1920px;
+  /* height: 100vh; */
+  overflow: hidden;
+
+  background: url("./../img/1-background.png") no-repeat;
+  -webkit-background-size: cover;
+  background-size: cover;
+}
+
+.container {
+  width: 100%;
+  max-width: 1920px;
+  margin: 0 auto;
+  max-height: 100vh;
+}
+
+.intro { 
+  /* position: relative; */
+  width: 100%;
+  height: 100vh;
+  max-width: 1920px;
+  /* max-height: 1080px; */
+  /* height: 100%; */
+  align-items: center;
+  text-align: center;
+}
+
+/* --------------------------HEADER----------------------------------  */
+
+.header {
+  /* БЕЗ WIDTH: 100% */
+  max-width: 1780px;
+  padding: 0 15px;
+  margin: 0 auto;
+  padding-top: 10px;
+  align-items: center;
+  text-align: center;
+  display: flex;
+  justify-content: space-between;
+  gap: 17px;
+}
+
+.menu {
+  display: flex;
+  align-items: center;
+  min-width: 50px;
+  height: 50px;
+
+  background-color: rgba(241, 242, 246, 1);
+  color: black;
+  border-radius: 100%;
+  box-shadow: 0px 5px 8px 0px rgb(139, 137, 137);
+}
+
+.menu:hover {
+  background-color: rgba(228, 229, 235, 1);
+}
+
+.logo {
+  font-size: 36px;
+  color: rgb(0, 0, 0);
+  font-weight: 400;
+  text-decoration: none;
+}
+
+/* -----NEW SEARCH----- */
+.form {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: relative;
+  max-width: 130vw;
+  min-width: 250px;
+  height: 50px;
+  background-color: rgba(241, 242, 246, 1);
+  box-shadow: 0px 5px 8px 0px rgb(139, 137, 137);
+  border-radius: 20px;
+}
+
+.form input {
+  font: 1rem;
+  width: 1230px;
+  height: 25px;
+  margin-left: 20px;
+  color: black;
+  background-color: rgba(241, 242, 246, 1);
+}
+
+.search__button {
+  width: 25px;
+  cursor: pointer;
+  margin-right: 20px;
+  margin-top: 8px;
+}
+
+/* ----NEW SEARCH (END)---- */
+
+.header__items {
+  min-width: 500px;
+}
+
+.header__item {
+  display: flex;
+  align-items: center;
+  min-width: 50px;
+  height: 50px;
+  background-color: rgba(241, 242, 246, 1);
+  border-radius: 10px;
+  box-shadow: 0px 5px 8px 0px rgb(139, 137, 137);
+  cursor: pointer;
+}
+
+.header__item:hover {
+  background-color: rgba(228, 229, 235, 1);
+}
+
+.header img {
+  margin: auto;
+}
+
+/* --------------------------------------MAIN PAGE----------------------------------- */
+
+.main__container {
+  position: absolute;
+
+  top: 17vh;
+  left: 50%;
+  transform: translateX(-50%);
+
+  width: 73vw;
+  height: 77vh;
+  z-index: 100;
+
+  display: flex;
+  align-items: center;
+  /* background-color: #f2b4fd;
+    background-size: cover; */
+}
+
+.main_photo {
+  position: absolute;
+  top: 0;
+  right: 0;
+
+  width: 77vh;
+  border-radius: 3.13vw;
+  box-shadow: 0px 5px 10px -5px rgba(34, 60, 80, 0.6);
+}
+
+.purple_form {
+  position: relative;
+  left: 0;
+
+  width: 41.35vw;
+  height: 25.21vw;
+
+  background-color: rgba(239, 225, 246, 0.8);
+
+  box-shadow: 0px 5px 10px -5px rgba(34, 60, 80, 0.6);
+  border-radius: 3.13vw;
+  text-align: left;
+}
+
+.purple_button {
+  width: 15.42vw;
+  height: 4.27vw;
+
+  position: absolute;
+  left: 4.79vw;
+  bottom: 6.09vw;
+
+  background: linear-gradient(to right, #eea6fa, #d5a4f8);
+  box-shadow: 0px 5px 10px -5px rgba(34, 60, 80, 0.6);
+  border-radius: 1.04vw;
+
+  color: white;
+  font-size: clamp(0.625rem, -0.538rem + 2.12vw, 2rem);
+  text-align: center;
+}
+
+.purple_button:hover {
+  background: linear-gradient(to right, #f2b4fd, #ddb6fa);
+  cursor: pointer;
+}
+
+.main__text {
+  width: 30vw;
+  height: 8.39vw;
+
+  position: absolute;
+  top: 5.52vw;
+  left: 4.79vw;
+
+  color: transparent;
+  -webkit-background-clip: text;
+  background-clip: text;
+  background-image: linear-gradient(
+    to right,
+    rgba(238, 166, 250, 1),
+    rgba(213, 164, 248, 1),
+    rgba(154, 161, 245, 1)
+  );
+}
+
+h1 {
+  margin: 0;
+  padding: 0;
+  font-size: clamp(1.25rem, -0.231rem + 2.69vw, 3rem);
+  font-weight: 600;
+}
+
+.purple_widget {
+  opacity: 80%;
+}
+
+.main__next_button {
+  width: 13vh;
+  height: 13vh;
+
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: 5vh;
+
+  z-index: 100;
+  color: black;
+  background-color: rgba(241, 242, 246, 1);
+  box-shadow: 0px 5px 10px -5px rgba(34, 60, 80, 0.6);
+
+  border-radius: 100%;
+}
+
+.main__next_button:hover {
+  background-color: rgba(228, 229, 235, 1);
+  cursor: pointer;
+}
+
+.main__next_button img {
+  width: 40%;
+}
+
+/*-----------------------------LOGIN FORM------------------------*/
+.login-window {
+  font-family: "Monda";
+  width: 100%;
+  height: 70vh;
+  max-width: 30.26vw;
+  background-color: white;
+  border-radius: 40px;
+  box-shadow: 0px 5px 10px -5px rgba(34, 60, 80, 0.6);
+  z-index: 101;
+
+  text-align: center;
+}
+
+.login__container {
+  margin: 8.33vw 1.56vw;
+  display: flex;
+  flex-direction: column;
+  gap: 1.2vw;
+}
+
+.login__desc {
+  display: flex;
+  flex-direction: column;
+}
+
+h2, span {
+  margin: 0;
+  padding: 0;
+}
+
+.login-window h2 {
+  font-size: clamp(1.25rem, -0.074rem + 2.35vw, 2.75rem);
+  font-weight: 400;
+}
+
+.login-window span {
+  font-size: clamp(0.875rem, 0.434rem + 0.78vw, 1.375rem);
+}
+
+.login-window a {
+  color: rgba(112, 161, 255, 1);
+}
+
+.login-window a:hover {
+  color: rgb(79, 127, 218);
+}
+
+.login__container input {
+  padding: 0.89vw 0;
+  padding-left: 1.67vw;
+  box-shadow: 0px 5px 10px -5px rgba(34, 60, 80, 0.6);
+  font-size: clamp(0.625rem, -0.257rem + 1.57vw, 1.625rem);
+  border-radius: 2.08vw;
+  background-color: rgba(241, 242, 246, 1);
+}
+
+.login__container input::placeholder {
+  color:rgba(164, 176, 190, 1);
+}
+
+.login-window button {
+  padding: 0.63vw 3.23vw;
+  width: 12.29vw;
+  height: 4.38vw;
+  margin: 0 auto;
+
+  font-size: clamp(0.625rem, -0.257rem + 1.57vw, 1.625rem);
+  border-radius: 2.08vw;
+  box-shadow: 0px 5px 10px -5px rgba(34, 60, 80, 0.6);
+  background-color: rgba(112, 161, 255, 1);
+  color: #fff;
+  border: none;
+  cursor: pointer;
+}
+
+.login-window button:hover {
+  background-color: rgb(79, 127, 218);
+  cursor: pointer;
+}
+
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(255, 255, 255, 0.7);
+  z-index: 101;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/*------------------------------MEDIA QUERIES FOR RESPONSIVENESS----------------------------*/
+@media (max-width: 768px) {
+  /* mobile phones */
+
+  .main__container {
+    width: 70vw;
+    height: 70vh;
   }
 
   .main_photo {
     position: absolute;
-    width: 40%;
-    top: 100%;
-    right: 258px;
-    border-radius: 59px;
-    box-shadow: rgb(139, 137, 137);
+    top: 0;
+
+    width: 70vw;
+    /*max-width: 100%;
+      max-height: 100%;
+      width: auto;
+      height: auto;*/
   }
 
-  /* .purple_form {
+  .purple_form {
     position: absolute;
-    left: 260px;
-    top: 165px;
-    background-color: rgba(239, 225, 246, 0.8);
-    box-shadow: 0px 5px 8px 0px rgb(139, 137, 137);
-    width: 100%;
-    height: 100%;
-    width: 794px;
-    height: 484px;
-    border-radius: 59px;
-  } */
+
+    bottom: 0;
+    top: 50vw;
+
+    width: 70vw;
+    height: 20vw;
+  }
+
+  .main__text {
+    width: 60vw;
+    top: 4vw;
+  }
 
   .purple_button {
-    position: absolute;
-    left: 92px;
-    bottom: 117px;
-    border-radius: 20px;
-    color: white;
-    font-size: 32px;
-    width: 296.38px;
-    height: 82.61px;
-    padding: 14px 33px;
-    background: linear-gradient(#eea6fa, #d5a4f8);
-    box-shadow: 0px 5px 8px 0px rgb(139, 137, 137);
+    width: 20vw;
+    height: 5vw;
+    border-radius: 2vw;
+    bottom: 4vw;
   }
+}
 
-  p {
-    color: linear-gradient(#eea6fa, #d5a4f8);
-    font-size: 48px;
-    left: 349px;
-  }
-
-  .purple_widget {
-    opacity: 80%;
-  }
-
-  .main__next_button {
-    position: absolute ;
-    width: 100%;
-    height: 100%;
-    width: 120px;
-    height: 120px;
-    color: black;
-    border-radius: 100%;
-    background-color: rgba(241, 242, 246, 1);
-    box-shadow: 0px 5px 8px 0px rgb(139, 137, 137);
-    transition: background .1s linear, color .1s linear;
-    left: 900px;
-    top: 740px;
-    z-index: 1000;
-  }
+@media (min-width: 769px) and (max-width: 1024px) {
+  /* tablets */
+}
