@@ -8,10 +8,10 @@ import favIcon from "./../img/fav_icon.svg";
 import cartIcon from "./../img/cart_icon.svg";
 import profileIcon from "./../img/profile_icon.svg";
 
-function smoothScroll() { // function for smooth scrolling
+export function smoothScroll(coeff) { // function for smooth scrolling
   window.scroll({
     left: 0,
-    top: window.innerHeight,
+    top: coeff * window.innerHeight,
     behavior: 'smooth',
   });
 }
@@ -87,7 +87,7 @@ function Main() {
  
           </div>
         </div>
-        <button onClick = { () => smoothScroll() } className="main__next_button">
+        <button onClick = { () => smoothScroll(1) } className="main__next_button">
             <img src={nextIcon}></img>
         </button> 
     </section>

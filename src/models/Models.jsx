@@ -9,6 +9,7 @@ import models__1 from "./../img/models__1.png";
 import models__2 from "./../img/models__2.png";
 import models__3 from "./../img/models__3.png";
 import models__4 from "./../img/models__4.png";
+import { smoothScroll } from "../main/Main";
 
 function Models() {
   return (
@@ -46,7 +47,7 @@ function Models() {
 
                     <div className="models">
                         
-                        <a className="show_btn">
+                        <a className="show_btn" onClick={() => smoothScroll(2)}>
                             <div className="show_btn_content">
                                 <img src = {showIcon}></img>
                                 <p>show all</p>
