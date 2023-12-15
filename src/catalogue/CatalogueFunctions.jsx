@@ -1,4 +1,5 @@
 import "./Catalogue";
+import { smoothScroll } from "../main/Main";
 
 function hideElementsByClass(className) {
     const elements = document.querySelectorAll('.' + className);
@@ -13,6 +14,7 @@ function unhideElementsByClass(className) {
       element.style.display = ''; // Setting display to an empty string resets it to the default value
     });
 }
+
 
 export function showMale() {
     unhideElementsByClass("catalogue__male");

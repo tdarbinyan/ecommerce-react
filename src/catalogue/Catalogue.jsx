@@ -1,4 +1,5 @@
 import "./catalogue.css";
+import favIcon from "./../img/fav_icon.svg";
 import models__2 from "./../img/models__2.png";
 import models__female from "./../img/womens_sneakers.webp"
 import models__kids from "./../img/kids_sneakers.webp"
@@ -7,40 +8,16 @@ import { showMale } from "./CatalogueFunctions.jsx";
 import { showFemale } from "./CatalogueFunctions.jsx";
 import { showKids } from "./CatalogueFunctions.jsx";
 
-function Cards({model}) {
+function Cards({ model }) {
   return (
-    <div className="catalogue__cards"> 
-
-                        <div className="catalogue__card">
-                                  <img className="catalogue__card_img" src = {model}></img>
-                                  <button className="catalogue__add_cart">add to the cart</button>
-                        </div>
-
-                        <div className="catalogue__card">
-                                  <img className="catalogue__card_img" src = {model}></img>
-                                  <button className="catalogue__add_cart">add to the cart</button>
-                        </div>
-
-                      <div className="catalogue__card">
-                                  <img className="catalogue__card_img" src = {model}></img>
-                                  <button className="catalogue__add_cart">add to the cart</button>
-                        </div>
-
-                        <div className="catalogue__card">
-                                  <img className="catalogue__card_img" src = {model}></img>
-                                  <button className="catalogue__add_cart">add to the cart</button>
-                        </div>
-
-                        <div className="catalogue__card">
-                                  <img className="catalogue__card_img" src = {model}></img>
-                                  <button className="catalogue__add_cart">add to the cart</button>
-                        </div>
-
-                        <div className="catalogue__card">
-                                  <img className="catalogue__card_img" src = {model}></img>
-                                  <button className="catalogue__add_cart">add to the cart</button>
-                        </div>
-
+    <div className="catalogue__cards">
+      {Array.from({ length: 8 }, (_, index) => (
+        <div className="catalogue__card" key={index}>
+          <img className="catalogue__fav" src = {favIcon}></img>
+          <img className="catalogue__card_img" src={model}></img>
+          <button className="catalogue__add_cart">add to the cart</button>
+        </div>
+      ))}
     </div>
   );
 }
@@ -70,14 +47,12 @@ function Catalogue() {
   };
 
     return (
-          <div className="intro">
               <div className="container">
                 <div className="catalogue_page">
 
                   <div className="catalogue__header">
                     <a href="#" className="catalogue__white_style"> catalogue</a>
                     <div className="catalogue__header_choice">
-                      {/*<a href="#">all</a>*/}
                       <a onClick={() => showMale()}>men</a>
                       <a onClick={() => showFemale()}>women</a>
                       <a onClick={() => showKids()}>kids</a>
@@ -101,7 +76,6 @@ function Catalogue() {
 
                   </div>
                 </div>
-              </div>
   
     );
   }
