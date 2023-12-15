@@ -4,7 +4,7 @@
   width: 100%;
   max-width: 1920px;
   overflow: hidden;
-  background: url("./../img/3-background.png") no-repeat;
+  background-color: #DEDBD6;
   -webkit-background-size: cover;
   background-size: cover;
   text-decoration: none;
@@ -76,6 +76,7 @@
 }
 
 .catalogue__card {
+  position: relative;
   display: flex;
   /* max-width: 31vh; */
   flex-direction: column;
@@ -119,8 +120,8 @@
   position: absolute;
   top: 0.78vw;
   right: 1.30vw;
-  width: 3.39vw;
-  
+  max-width: 1vw;
+  max-height: 1vw;
 }
 
 .catalogue button:hover {

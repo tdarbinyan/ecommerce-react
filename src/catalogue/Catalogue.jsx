@@ -13,7 +13,6 @@ function Cards({ model }) {
     <div className="catalogue__cards">
       {Array.from({ length: 8 }, (_, index) => (
         <div className="catalogue__card" key={index}>
-          <img className="catalogue__fav" src = {favIcon}></img>
           <img className="catalogue__card_img" src={model}></img>
           <button className="catalogue__add_cart">add to the cart</button>
         </div>

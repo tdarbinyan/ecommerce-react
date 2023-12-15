@@ -46,7 +46,7 @@ body {
 }
 
 .categories__card__buttons {
-  font-size: clamp(1rem, 0.118rem + 1.57vw, 2rem);
+  font-size: 1.6vw;
   display: flex;
   gap: 1vw;
   position: absolute;
@@ -68,8 +68,10 @@ body {
 }
 
 .categories__card__cart img {
-  width: clamp(0.875rem, -0.007rem + 1.57vw, 1.875rem);
-  padding: 0 0.5vw;
+  width: 1.5vw;
+  padding: 0 0.2vw 0;
+  position: relative;
+  top: 0.2vw;
 }
 
 .categories__card__buttons a:hover {
@@ -109,11 +111,11 @@ body {
 }
 
 .show_btn img {
-  width: clamp(0.625rem, -2.022rem + 4.71vw, 3.625rem);
+  width: 3.5vw;
 }
 
 .show_btn p {
-  font-size: clamp(1rem, 0.118rem + 1.57vw, 2rem);
+  font-size: 2vw;
 }
 
 .show_btn_content {
@@ -134,7 +136,7 @@ body {
   display: flex;
   max-height: 50vh;
   justify-content: space-between;
-  gap: 2.04vw;
+  gap: 2.4vw;
 }
 
 .models__card_img {

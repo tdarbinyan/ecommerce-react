@@ -1,25 +1,20 @@
-import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 
 const DataComponent = () => {
-  const [data, setData] = useState('');
-  useEffect(() => {
-    const fetchData = async () => {
-      try {
-        const response = await axios.get('http://localhost:8080/api/items/gay');
-        setData(response.data);
-      } catch (error) {
-        console.error('Error fetching data:', error);
-      }
-    };
-    fetchData();
-  }, []);
-  return (
-    <div>
-      <h1>Data:</h1>
-      <p>{data}</p>
-    </div>
-  );
+  const newItem = {
+    size: 'Medium',
+    name: 'Example Item',
+    price: 10.99,
+    image: 'example.jpg',
+    tag: 'new',
+  };
+  
+  try {
+    const response = axios.post('http://localhost:8080/api/items/add', newItem);
+    console.log('Item sent successfully:', response.data);
+  } catch (error) {
+    console.error('Error sending item:', error);
+  }
 };
 
 export default DataComponent;

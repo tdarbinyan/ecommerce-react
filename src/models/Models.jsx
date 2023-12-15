@@ -13,6 +13,7 @@ import { smoothScroll } from "../main/Main";
 import { showMale } from "./../catalogue/CatalogueFunctions";
 import { showFemale } from "./../catalogue/CatalogueFunctions";
 import { showKids } from "./../catalogue/CatalogueFunctions";
+import React, { useState } from 'react';
 
 function scrollMale() {
     smoothScroll(2);
@@ -26,6 +27,26 @@ function scrollKids() {
     smoothScroll(2);
     showKids();
 }
+
+const ItemCard = ({ imageUrl }) => {
+    const [addedToCart, setAddedToCart] = useState(false);
+  
+    const handleButtonClick = () => {
+      setAddedToCart(!addedToCart);
+    };
+  
+    return (
+      <div className="models__card">
+        <img className="models__card_img" src={imageUrl} alt="Model"></img>
+        <button
+          className="models__add_cart"
+          onClick={handleButtonClick}
+        >
+          {addedToCart ? 'added to cart' : 'add to cart'}
+        </button>
+      </div>
+    );
+  };
 
 function Models() {
   return (
@@ -71,29 +92,10 @@ function Models() {
 
                         <div className="models__cards">
 
-                            <div className="models__card">
-                                <img className="models__fav" src = {favIcon}></img>
-                                <img className="models__card_img" src = {models__1}></img>
-                                <button className="models__add_cart">add to the cart</button>
-                            </div>
-
-                            <div className="models__card">
-                                <img className="models__fav" src = {favIcon}></img>
-                                <img className="models__card_img" src = {models__2}></img>
-                                <button className="models__add_cart">add to the cart</button>
-                            </div>
-
-                            <div className="models__card">
-                                <img className="models__fav" src = {favIcon}></img>
-                                <img className="models__card_img" src = {models__3}></img>
-                                <button className="models__add_cart">add to the cart</button>
-                            </div>
-
-                            <div className="models__card">
-                                <img className="models__fav" src = {favIcon}></img>
-                                <img className="models__card_img" src = {models__4}></img>
-                                <button className="models__add_cart">add to the cart</button>
-                            </div>
+                            <ItemCard imageUrl={models__1} />
+                            <ItemCard imageUrl={models__2} />
+                            <ItemCard imageUrl={models__3} />
+                            <ItemCard imageUrl={models__4} />
 
                         </div>
 

@@ -1,0 +1,12 @@
+.Basket {
+    background-color: #DEDBD6;
+    align-items: center;
+}
+
+.Cart_container {
+    width: 98vw;
+}
+
+.Cart__products {
+    width: 60vw;
+}
