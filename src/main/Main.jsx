@@ -4,7 +4,7 @@ import mainPhoto from "./../img/main_photo.png";
 import nextIcon from "./../img/next_icon.svg";
 import menuIcon from "./../img/menu_icon.svg"; //временная мера, потом занесу импорт всех изображений в отдельный файл или подключу иконки
 import searchIcon from "./../img/search_icon.svg";
-import favIcon from "./../img/fav_icon.svg";
+// import favIcon from "./../img/fav_icon.svg";
 import cartIcon from "./../img/cart_icon.svg";
 import profileIcon from "./../img/profile_icon.svg";
 
@@ -18,7 +18,7 @@ export function smoothScroll(coeff) { // function for smooth scrolling
 
 function LoginWindow({ onClose }) { // component that returns login form
   return (
-    <div className="login-window">
+    <div onClick={(e) => e.stopPropagation()} className="login-window">
 
       <div className="login__container">
 
@@ -37,15 +37,14 @@ function LoginWindow({ onClose }) { // component that returns login form
 }
 
 function Main() {
-
   const [isLoginWindowOpen, setLoginWindowOpen] = useState(false); // utility for login form
 
   const openLoginWindow = () => { // utility for login form
-    setLoginWindowOpen(true);
+      setLoginWindowOpen(true);
   };
 
   const closeLoginWindow = () => { // utility for login form
-    setLoginWindowOpen(false);
+      setLoginWindowOpen(false);
   };
 
   return (
@@ -59,14 +58,12 @@ function Main() {
               <input type="search" placeholder="Search models and collections"/>
               <a className="search__button"><img src = {searchIcon}></img></a>
             </div>
-            <a className="header__item" href="#"><img src = {favIcon}></img></a>
-            <a className="header__item" href="#"><img src = {cartIcon}></img></a>
+            {/* <a className="header__item" href="#"><img src = {favIcon}></img></a> */}
+            <a className="header__item" href="/cart"><img src = {cartIcon}></img></a>
             <a className="header__item" href="#" onClick={openLoginWindow}><img src={profileIcon} alt="Profile Icon" /></a>
             {isLoginWindowOpen && (
             <div className="overlay" onClick={closeLoginWindow}>
-              <div className="login-window" onClick={(e) => e.stopPropagation()}>
                 <LoginWindow onClose={closeLoginWindow} />
-              </div>
             </div>
             )}
 
@@ -79,7 +76,7 @@ function Main() {
                   <h1>some text describing our bestseller</h1>
                 </div>
                 <button className="purple_button">
-                  add to the cart
+                  start shopping
                 </button>
               </div>
           </div>
